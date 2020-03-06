@@ -15,6 +15,7 @@
         android:layout_gravity="center_vertical"
         android:text="안녕하세요"
         android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimary"
         android:textSize="20dp" />
 
     <TextView
