@@ -3,4 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="textview_color">#E32020</color>
+    <color name="Randomcolor">#E37E77</color>
+
+
+
+
 </resources>
