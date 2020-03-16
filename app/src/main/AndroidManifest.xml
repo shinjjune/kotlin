@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".AddViewActivity">
+        <activity android:name=".PhonebookActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,9 +19,10 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".LibraryActivity">
+        <activity android:name=".AddViewActivity">
 
         </activity>
+        <activity android:name=".LibraryActivity"></activity>
         <activity android:name=".ThreadActivity" />
         <activity android:name=".Context" />
         <activity android:name=".Resource" />
