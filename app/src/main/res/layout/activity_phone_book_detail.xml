@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E2C2C"
     android:orientation="vertical"
-    android:background="#171010"
     tools:context=".PhoneBookDetailActivity">
+
 
     <ImageView
         android:id="@+id/back"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/clean"/>
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/clean" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -24,20 +26,21 @@
         android:id="@+id/person_detail_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
         android:text="abc"
         android:textColor="#ffffff"
-        android:gravity="center"
-        android:layout_marginBottom="16dp"
         android:textSize="50dp" />
 
     <TextView
-        android:id="@+id/person_detail_number"
+        android:id="@+id/person-detail_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="010-1231-4444"
-        android:textColor="#ffffff"
-        android:gravity="center"
         android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="010"
+        android:textColor="#ffffff"
         android:textSize="50dp" />
+
 
 </LinearLayout>

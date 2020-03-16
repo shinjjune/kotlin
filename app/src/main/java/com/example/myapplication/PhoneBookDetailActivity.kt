@@ -1,8 +1,8 @@
 package com.example.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.myapplication.Kotlin.num
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_phone_book_detail.*
 import kotlinx.android.synthetic.main.activity_phone_book_detail.*
 
 class PhoneBookDetailActivity : AppCompatActivity() {
@@ -13,12 +13,14 @@ class PhoneBookDetailActivity : AppCompatActivity() {
 
         getPersonInfoAndDraw()
 
-        back.setOnClickListener{
+
+        back.setOnClickListener {
             onBackPressed()
         }
     }
 
-    fun getPersonInfoAndDraw(){
+
+    fun getPersonInfoAndDraw() {
         val name = intent.getStringExtra("name")
         val number = intent.getStringExtra("number")
 
