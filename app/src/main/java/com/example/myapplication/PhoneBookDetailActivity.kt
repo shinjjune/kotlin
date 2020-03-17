@@ -13,7 +13,6 @@ class PhoneBookDetailActivity : AppCompatActivity() {
 
         getPersonInfoAndDraw()
 
-
         back.setOnClickListener {
             onBackPressed()
         }

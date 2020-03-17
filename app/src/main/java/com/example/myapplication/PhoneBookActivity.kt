@@ -19,7 +19,8 @@ class PhoneBookActivity : AppCompatActivity() {
     }
 
 
-    fun createFakePhoneBook(faskeNumber: Int = 10, phoneBook: PhoneBook = PhoneBook()): PhoneBook {
+    fun createFakePhoneBook(faskeNumber: Int = 10, phoneBook: PhoneBook = PhoneBook()):
+            PhoneBook {
         for (i in 0 until faskeNumber) {
             phoneBook.addPerson(
                 Person(name = "" + i + "번째 사람", number = "" + i + "번째 사람의 전화 번호")
