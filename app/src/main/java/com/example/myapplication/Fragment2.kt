@@ -19,7 +19,7 @@ class Fragment2: Fragment() {
         // 프라그먼트가 인터페이스를 처음으로 그릴 때 호출된다.
         // inflater -> 뷰를 그려주는 역할
         // container -> 부모뷰
-        return inflater.inflate(R.layout.fragment_one, container,false)
+        return inflater.inflate(R.layout.fragment_two, container,false)
     }
 
 
