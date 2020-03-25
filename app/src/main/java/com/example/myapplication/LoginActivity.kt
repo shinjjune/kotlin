@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.app.Activity
+import android.app.ProgressDialog.show
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +40,10 @@ class LoginActivity : AppCompatActivity() {
                         (application as MasterApplication).createRetrofit()
 
                         Toast.makeText(this@LoginActivity, "로그인 성공!!!", Toast.LENGTH_LONG)
+                            .show()
+                        startActivity(
+                            Intent(this@LoginActivity, InStagramPostListActivity::class.java)
+                        )
                     }
                 }
             })
