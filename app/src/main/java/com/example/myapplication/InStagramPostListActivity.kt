@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -44,6 +45,9 @@ class InStagramPostListActivity : AppCompatActivity() {
                 }
             }
         )
+        user_info.setOnClickListener { startActivity(Intent(this,InstagramUserInfo::class.java)) }
+        my_list.setOnClickListener { startActivity(Intent(this,InStagramPostListActivity::class.java)) }
+        user_upload.setOnClickListener { startActivity(Intent(this,InStagramUpLoad::class.java)) }
     }
 
 }

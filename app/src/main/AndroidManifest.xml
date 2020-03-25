@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".InStagramPostListActivity"></activity>
+        <activity android:name=".InStagramUpLoad"></activity>
+        <activity android:name=".InStagramMyPostActivity" />
+        <activity android:name=".InstagramUserInfo" />
+        <activity android:name=".InStagramPostListActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".EmailSignupActivity">
             <intent-filter>
