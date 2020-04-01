@@ -32,7 +32,7 @@ class InStagramMyPostActivity : AppCompatActivity() {
 
         myPostRecyclerView = mypost_recyclerview
         glide = Glide.with(this@InStagramMyPostActivity)
-        createList()
+//        createList()
         user_info.setOnClickListener { startActivity(Intent(this, InstagramUserInfo::class.java)) }
         all_list.setOnClickListener {
             startActivity(
@@ -45,33 +45,33 @@ class InStagramMyPostActivity : AppCompatActivity() {
         user_upload.setOnClickListener { startActivity(Intent(this, InStagramUpLoad::class.java)) }
     }
 
-    fun createList() {
-        (application as MasterApplication).service.getUserPostList().enqueue(
-            object : Callback<ArrayList<Post>> {
-                override fun onFailure(call: Call<ArrayList<Post>>, t: Throwable) {
-
-                }
-
-                override fun onResponse(
-                    call: Call<ArrayList<Post>>,
-                    response: Response<ArrayList<Post>>
-                ) {
-                    if (response.isSuccessful) {
-                        val myPostList = response.body()
-                        val adapter = MyPostAdapter(
-                            myPostList!!,
-                            LayoutInflater.from(this@InStagramMyPostActivity),
-                            glide
-                        )
-                        myPostRecyclerView.adapter = adapter
-                        myPostRecyclerView.layoutManager =
-                            LinearLayoutManager(this@InStagramMyPostActivity)
-
-                    }
-                }
-            }
-        )
-    }
+//    fun createList() {
+//        (application as MasterApplication).service.getUserPostList().enqueue(
+//            object : Callback<ArrayList<Post>> {
+//                override fun onFailure(call: Call<ArrayList<Post>>, t: Throwable) {
+//
+//                }
+//
+//                override fun onResponse(
+//                    call: Call<ArrayList<Post>>,
+//                    response: Response<ArrayList<Post>>
+//                ) {
+//                    if (response.isSuccessful) {
+//                        val myPostList = response.body()
+//                        val adapter = MyPostAdapter(
+//                            myPostList!!,
+//                            LayoutInflater.from(this@InStagramMyPostActivity),
+//                            glide
+//                        )
+//                        myPostRecyclerView.adapter = adapter
+//                        myPostRecyclerView.layoutManager =
+//                            LinearLayoutManager(this@InStagramMyPostActivity)
+//
+//                    }
+//                }
+//            }
+//        )
+//    }
 
 }
 
