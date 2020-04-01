@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -38,7 +40,8 @@ class youTubeActivity : AppCompatActivity() {
                         val adapter = YoutubeAdapter(
                             youtubeList!!,
                             LayoutInflater.from( this@youTubeActivity),
-                            glide
+                            glide,
+                            this@youTubeActivity
                         )
                         youtube_list_recycler.adapter = adapter
                     }
@@ -51,7 +54,8 @@ class youTubeActivity : AppCompatActivity() {
 class YoutubeAdapter(
     var youtubeList: ArrayList<YouTube>,
     val inflater: LayoutInflater,
-    val glide: RequestManager
+    val glide: RequestManager,
+    val activity : Activity
 ) : RecyclerView.Adapter<YoutubeAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -64,6 +68,12 @@ class YoutubeAdapter(
             thumbnail = itemView.findViewById(R.id.youtube_thumbnail)
             content = itemView.findViewById(R.id.youtube_content)
 
+            itemView.setOnClickListener {
+                val position : Int= adapterPosition
+                val intent = Intent(activity, YoutubeDetailActivity::class.java)
+                intent.putExtra("video_url",youtubeList.get(position).video)
+                activity.startActivity(intent)
+            }
         }
     }
 
