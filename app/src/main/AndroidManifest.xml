@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".YoutubeDetailActivity"></activity>
+        <activity android:name=".AppleActivity"></activity>
+        <activity android:name=".YoutubeDetailActivity" />
         <activity android:name=".youTubeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,7 +40,7 @@
         <activity android:name=".PhoneBookActivity" />
         <activity android:name=".AddViewActivity" />
         <activity android:name=".LibraryActivity" />
-        <activity android:name=".ThreadActivity"></activity>
+        <activity android:name=".ThreadActivity" />
         <activity android:name=".ContextActivity" />
         <activity android:name=".Resource" />
         <activity android:name=".NullSafety" />
