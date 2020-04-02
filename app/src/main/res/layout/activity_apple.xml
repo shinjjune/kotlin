@@ -7,10 +7,7 @@
     android:orientation="vertical"
     tools:context=".AppleActivity">
 
-    <Button
-        android:id="@+id/test"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/song_list"
